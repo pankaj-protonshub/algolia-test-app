@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemStoriesCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="6dp"
+    card_view:cardCornerRadius="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/itemStoriesIndexTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/colorHeader"
+            android:text="1." />
+
+        <TextView
+            android:id="@+id/itemStoriesTitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorHeader"
+            android:text="Title Goes Here" />
+
+        <TextView
+            android:id="@+id/itemStoriesCreatedAtTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/colorSubheader"
+            android:text="Title Goes Here" />
+
+        <Switch
+            android:id="@+id/itemStoriesSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:layout_gravity="right"
+            />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

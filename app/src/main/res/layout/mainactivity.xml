@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:id="@+id/selectedStoriesCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/storiesContainerSRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/storiesRV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/storiesitem"
+                />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <TextView
+            android:id="@+id/retryTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:text="Oh! Something went wrong. Try again maybe?\nTap to retry"
+            android:gravity="center"
+            />
+
+
+        <ProgressBar
+            android:id="@+id/loadingStoriesPB"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminate="true"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="30dp"
+            />
+
+
+    </FrameLayout>
+
+</LinearLayout>
